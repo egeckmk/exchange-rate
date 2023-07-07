@@ -77,7 +77,7 @@ function Converter() {
   return (
     <div className="flex justify-center mb-4">
       <div className="flex flex-col border w-1/2 p-8 rounded-lg">
-        <div className="flex justify-between mb-4">
+        <div className="mb-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           <div className="flex flex-col">
             <label>Amount</label>
             <input
@@ -122,7 +122,7 @@ function Converter() {
           </div>
         </div>
         <div className="mb-4">{from + " => " + to}</div>
-        <div className="w-1/3 flex items-center gap-4 mb-4">
+        <div className="w-full flex items-center gap-4 mb-4">
           <label>Result</label>
           <div className="p-2 border rounded-lg w-full">
             {trueCalculate("*", amount || 1, reverseExchangeRates[from] || 1)}

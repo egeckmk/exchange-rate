@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { trueCalculate } from "../utils/utils.js";
 
-const Info1 = () => {
+const Info = () => {
   const from = useSelector((state) => state.exchangeRateState.from);
   const to = useSelector((state) => state.exchangeRateState.to);
   const exchangeRates = useSelector(
@@ -13,7 +13,7 @@ const Info1 = () => {
 
   return (
     <div className="flex justify-center mb-4">
-      <div className="flex justify-center gap-8 w-1/2">
+      <div className="grid lg:grid-cols-2 grid-cols-1 justify-center gap-8 w-1/2">
         <div className="flex flex-col items-center border w-full rounded-lg p-2">
           <div className="w-full text-center mb-2">
             Convert {from} to {to}
@@ -232,4 +232,4 @@ const Info1 = () => {
   );
 };
 
-export default Info1;
+export default Info;
